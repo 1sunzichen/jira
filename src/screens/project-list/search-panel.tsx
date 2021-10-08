@@ -1,8 +1,7 @@
-
-export const SearchPancel = (props) => {
+export const SearchPancel = (props: any) => {
   // const [param, setParam] = useState({ name: "", personId: "" });
-  const {users}=props;
-  const {param, setParam} =props
+  const { users } = props;
+  const { param, setParam } = props;
 
   return (
     <form action="">
@@ -27,7 +26,7 @@ export const SearchPancel = (props) => {
           }
         >
           <option value={""}>负责人</option>
-          {users.map((user) => {
+          {users.map((user: any) => {
             return <option value={user.id}>{user.name}</option>;
           })}
         </select>
