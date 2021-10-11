@@ -1,4 +1,19 @@
-export const SearchPancel = (props: any) => {
+export interface Users {
+  id: string;
+  name: string;
+  personId: number;
+  organization: string;
+  created: number;
+}
+interface SearchPanelProps {
+  users: Users[];
+  param: {
+    name: string;
+    personId: string;
+  };
+  setParam: (param: SearchPanelProps["param"]) => void;
+}
+export const SearchPancel = (props: SearchPanelProps) => {
   // const [param, setParam] = useState({ name: "", personId: "" });
   const { users } = props;
   const { param, setParam } = props;

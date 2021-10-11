@@ -1,4 +1,17 @@
-export const NewList = (props: any) => {
+import { Users } from "./search-panel";
+
+interface Project {
+  id: string;
+  name: string;
+  personId: string;
+  pin: boolean;
+  organization: string;
+}
+interface ListProps {
+  list: Project[];
+  users: Users[];
+}
+export const NewList = (props: ListProps) => {
   return (
     <table>
       <thead>
